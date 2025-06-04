@@ -1,0 +1,126 @@
+@import '../../styles/variables.scss';
+
+.navbar {
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: transparent;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+
+  &.scrolled {
+    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  }
+
+  &__container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  &__logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $text-primary;
+  }
+
+  &__links {
+    display: flex;
+    gap: 2rem;
+
+
+    a {
+      color: $text-secondary;
+      font-weight: 500;
+      text-decoration: none;
+      position: relative;
+      cursor: pointer;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0%;
+        height: 2px;
+        background-color: $primary-color;
+        transition: width 0.3s ease-in-out;
+      }
+
+      &:hover {
+        color: $text-primary;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: white;
+      flex-direction: column;
+      align-items: center;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid #eee;
+      transform: translateY(-100%);
+      opacity: 0;
+      pointer-events: none;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+
+      &.open {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: all;
+      }
+
+      a {
+        padding: 0.75rem 0;
+        font-size: 1.125rem;
+      }
+    }
+  }
+
+  &__contact-btn {
+    background-color: $primary-color; // MUI blue[500]
+    color: #fff;
+    padding: 0.5rem 1.25rem;
+    border-radius: 4px; // pill-shaped
+    font-weight: 600; // similar to MUI's "medium"
+    font-size: 0.875rem; // matches MUI's default button text
+    line-height: 1.75; // aligns with MUI button height
+    text-transform: none; // prevent uppercase if matching MUI text
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: lighten($primary-color, 10%); // MUI blue[600]
+    }
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: #1f2937;
+
+    @media (max-width: 768px) {
+      display: block;
+    }
+  }
+}
