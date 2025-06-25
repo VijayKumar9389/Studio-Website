@@ -4,7 +4,6 @@ import { CgClose } from 'react-icons/cg';
 import { MdMenu } from 'react-icons/md';
 import { Link } from 'react-scroll'; // ✅ Import Link from react-scroll
 import ContactFormDialog from "../Dialog/Dialog.tsx";
-import { GiSaberToothedCatHead } from 'react-icons/gi';
 
 const Navbar: React.FC = () => {
     const [mobileOpen, setMobileOpen] = useState(false);
@@ -32,7 +31,10 @@ const Navbar: React.FC = () => {
         <>
             <header className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
                 <div className="navbar__container">
-                    <div className="navbar__logo"><GiSaberToothedCatHead /></div>
+
+                    <div className="navbar__logo" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+                        <span className="logo-highlight">Vijay</span>Kumar
+                    </div>
 
                     <nav className={`navbar__links ${mobileOpen ? 'open' : ''}`}>
                         <Link to="features-section" smooth={true} duration={200} offset={-70}>About</Link>
@@ -47,6 +49,7 @@ const Navbar: React.FC = () => {
                     <button className="navbar__toggle" onClick={toggleMenu}>
                         {mobileOpen ? <CgClose size={24} /> : <MdMenu size={24} />}
                     </button>
+
                 </div>
             </header>
 

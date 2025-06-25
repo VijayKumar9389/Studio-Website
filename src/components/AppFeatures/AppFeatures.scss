@@ -32,11 +32,9 @@
 
 .section-title {
   font-size: $font-size-tagline; // $font-size-subtitle
-  color: $primary-color;
-  margin-bottom: 0.75rem;
+  color: $text-primary;
   text-transform: uppercase;
   border-bottom: 3px solid lighten($primary-color, 60%);
-  padding-bottom: 0.5rem;
   max-width: fit-content;
 }
 

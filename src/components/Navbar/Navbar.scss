@@ -1,8 +1,7 @@
-@import '../../styles/variables.scss';
+@use '../../styles/variables.scss' as *;
 
 .navbar {
   width: 100%;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -11,8 +10,8 @@
 
   &.scrolled {
     backdrop-filter: blur(12px);
-    background: rgba(255, 255, 255, 0.8);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   }
 
   &__container {
@@ -26,20 +25,40 @@
   }
 
   &__logo {
-    font-size: 2rem;
+    font-size: 1.75rem;
+    font-weight: 700;
     color: $text-primary;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+
+    .logo-highlight {
+      color: $primary-color;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+      opacity: 0.9;
+    }
   }
 
   &__links {
     display: flex;
     gap: 2rem;
+    align-items: center;
 
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 
     a {
       color: $text-secondary;
       font-weight: 500;
       text-decoration: none;
       position: relative;
+      transition: color 0.3s ease;
       cursor: pointer;
 
       &::after {
@@ -50,7 +69,7 @@
         width: 0%;
         height: 2px;
         background-color: $primary-color;
-        transition: width 0.3s ease-in-out;
+        transition: width 0.3s ease;
       }
 
       &:hover {
@@ -67,12 +86,12 @@
       top: 100%;
       left: 0;
       right: 0;
-      background-color: white;
+      background: rgba(255, 255, 255, 0.95);
       flex-direction: column;
       align-items: center;
       padding: 1.5rem 0;
-      border-bottom: 1px solid #eee;
-      transform: translateY(-100%);
+      border-bottom: 1px solid #ddd;
+      transform: translateY(-10%);
       opacity: 0;
       pointer-events: none;
       transition: transform 0.3s ease, opacity 0.3s ease;
@@ -91,20 +110,21 @@
   }
 
   &__contact-btn {
-    background-color: $primary-color; // MUI blue[500]
+    background-color: $primary-color;
     color: #fff;
-    padding: 0.5rem 1.25rem;
-    border-radius: 4px; // pill-shaped
-    font-weight: 600; // similar to MUI's "medium"
-    font-size: 0.875rem; // matches MUI's default button text
-    line-height: 1.75; // aligns with MUI button height
-    text-transform: none; // prevent uppercase if matching MUI text
+    padding: 0.5rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    line-height: 1.75;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 12px rgba(42, 196, 32, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 
     &:hover {
-      background-color: lighten($primary-color, 10%); // MUI blue[600]
+      background-color: lighten($primary-color, 10%);
+      box-shadow: 0 6px 18px rgba(42, 196, 32, 0.25);
     }
 
     @media (max-width: 768px) {
@@ -117,6 +137,7 @@
     background: transparent;
     border: none;
     color: #1f2937;
+    cursor: pointer;
 
     @media (max-width: 768px) {
       display: block;

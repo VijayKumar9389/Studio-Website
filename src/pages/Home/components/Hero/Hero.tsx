@@ -14,8 +14,8 @@ const Hero: React.FC = () => {
 
                 <section>
                     <p>
-                        We transform ideas into powerful, centralized web platforms that put your entire operation at
-                        your fingertips. By combining deep technical expertise with business insight, we empower
+                        I transform ideas into powerful, centralized web platforms that put your entire operation at
+                        your fingertips. By combining deep technical expertise with business insight, I empower
                         businesses to lead with efficiency and clarity.
                     </p>
                 </section>
