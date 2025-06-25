@@ -1,4 +1,4 @@
-@use '../../styles/variables.scss' as *;
+@import '../../styles/variables.scss';
 
 .navbar {
   width: 100%;
@@ -38,10 +38,6 @@
       color: $primary-color;
     }
 
-    &:hover {
-      transform: scale(1.05);
-      opacity: 0.9;
-    }
   }
 
   &__links {

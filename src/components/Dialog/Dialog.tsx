@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Dialog.scss';
+import {MdClose} from "react-icons/md";
 
 interface ContactFormDialogProps {
     isOpen: boolean;
@@ -47,28 +48,42 @@ const ContactFormDialog: React.FC<ContactFormDialogProps> = ({ isOpen, toggle })
     if (!isOpen) return null;
 
     return (
-        <div className="contact-modal">
-            <div className="modal-backdrop" onClick={toggle}></div>
-            <div className="modal-content">
-                <button className="close-button" onClick={toggle}>×</button>
-                <h2>Contact Us</h2>
-                <form onSubmit={handleSubmit}>
+        <div className="contact-modal-backdrop" onClick={toggle} role="dialog" aria-modal="true" aria-labelledby="dialog-title">
+            <div
+                className="contact-modal-container"
+                onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside
+            >
+                <header className="contact-modal-header">
+                    <h2 id="dialog-title" className="contact-modal-title">
+                        Contact Us
+                    </h2>
+                    <button aria-label="Close dialog" className="contact-modal-close" onClick={toggle}>
+                        <MdClose size={24} />
+                    </button>
+                </header>
+
+                <form onSubmit={handleSubmit} className="contact-modal-form" noValidate>
                     <div className="form-group">
-                        <label>Name</label>
-                        <input type="text" name="name" value={form.name} onChange={handleChange} />
+                        <label htmlFor="name">Name</label>
+                        <input id="name" type="text" name="name" value={form.name} onChange={handleChange} />
                         {errors.name && <span className="error">{errors.name}</span>}
                     </div>
+
                     <div className="form-group">
-                        <label>Email</label>
-                        <input type="email" name="email" value={form.email} onChange={handleChange} />
+                        <label htmlFor="email">Email</label>
+                        <input id="email" type="email" name="email" value={form.email} onChange={handleChange} />
                         {errors.email && <span className="error">{errors.email}</span>}
                     </div>
+
                     <div className="form-group">
-                        <label>Message</label>
-                        <textarea name="message" rows={4} value={form.message} onChange={handleChange}></textarea>
+                        <label htmlFor="message">Message</label>
+                        <textarea id="message" name="message" rows={4} value={form.message} onChange={handleChange}></textarea>
                         {errors.message && <span className="error">{errors.message}</span>}
                     </div>
-                    <button type="submit" className="submit-button">Send</button>
+
+                    <button type="submit" className="submit-button">
+                        Send
+                    </button>
                 </form>
             </div>
         </div>
