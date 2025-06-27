@@ -40,7 +40,7 @@ const InventorySupplyPage: React.FC = () => {
 
                 <section className="app-features">
                     <AppFeatures
-                        title={inventorySupplyData.title}
+                        title={"test"}
                         description={inventorySupplyData.desc}
                         sections={inventorySupplyData.sections.flatMap(section => section.sections)}
                     />

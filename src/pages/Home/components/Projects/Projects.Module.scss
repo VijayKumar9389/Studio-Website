@@ -25,25 +25,30 @@
 }
 
 .project-card {
-  overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  padding: 1.5rem;
-  border-radius: 1rem;
-  background-color: #fff;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
 
   &:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+
+    .project-image-wrapper {
+      transform: translateY(-0.5rem);
+    }
+
+    .title-arrow {
+      transform: translateX(0.2rem);
+      color: #2563eb;
+    }
   }
 
   .project-image-wrapper {
     width: 100%;
+    aspect-ratio: 1 / 1;
     overflow: hidden;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid #e5e5e5;
+    border-radius: 1rem;
+    background-color: #fff;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     .project-image {
       width: 100%;
@@ -54,48 +59,30 @@
   }
 
   .project-info {
-    padding: 1.5rem;
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
 
-    .project-title {
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-      color: #1a1a1a;
-      position: relative;
+    .project-title-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      .project-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #111827;
+      }
+
+      .title-arrow {
+        transition: transform 0.3s ease, color 0.3s ease;
+        font-size: 1.2rem;
+      }
     }
 
     .project-desc {
       font-size: 1.05rem;
-      color: #5a5a5a;
+      color: #4b5563;
       line-height: 1.7;
-      letter-spacing: 0.01em;
-    }
-
-    .project-action {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      margin-top: auto;
-      font-weight: 500;
-      font-size: 0.95rem;
-      color: #2ac420;
-      cursor: pointer;
-      transition: color 0.2s ease;
-
-      svg {
-        transition: transform 0.3s ease;
-      }
-
-      &:hover {
-        color: #239f1a;
-
-        svg {
-          transform: translateX(5px);
-        }
-      }
     }
   }
 }

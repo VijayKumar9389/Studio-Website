@@ -10,7 +10,7 @@ import InventoryLogo from "../../assets/Media/deploy.svg";
 import { WorkData} from "../../vite-env";
 
 export const inventorySupplyData: WorkData = {
-    title: "Inventory Supply Flow App",
+    title: "Supply Flow App",
     desc: "from warehouse structuring and batch material tracking to equipment lifecycle management and user accountability.",
     imageUrl: InventoryApp,
     logo: InventoryLogo,
