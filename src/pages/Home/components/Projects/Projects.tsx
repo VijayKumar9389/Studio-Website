@@ -29,7 +29,7 @@ const ProjectsSection = () => {
                         <div className="project-info">
                             {project.desc && <p className="project-desc">{project.desc}</p>}
                             <div className="project-title-wrapper">
-                                <h5 className="project-title">{project.title}</h5>
+                                <h1 className="project-title">{project.title}</h1>
                                 <FiArrowUpRight className="title-arrow" />
                             </div>
                         </div>

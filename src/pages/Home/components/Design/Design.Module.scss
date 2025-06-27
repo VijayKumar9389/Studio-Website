@@ -111,6 +111,7 @@
     .section {
       .section-content {
         flex-direction: column;
+        gap: 2rem;
 
         &:nth-child(odd) {
           flex-direction: column;
