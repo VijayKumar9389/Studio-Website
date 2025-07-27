@@ -23,13 +23,15 @@ const OnTractPage: React.FC = () => {
             <AppHeader title={ontractData.title} logo={ontractData.logo} imageUrl={ontractData?.imageUrl}/>
                 <section className="app-section">
                     <h2>The Challenge</h2>
-                    <p>Triton Public Awareness relied on Excel files for stakeholder data management, requiring manual updates, separate files for different team members, and time-consuming compilation of master records. This led to inconsistencies, inefficiencies, and difficulty in tracking deliveries. Additionally, Excel was used for visualizing deliveries, further complicating an already cumbersome process.</p>
+                    <p>
+                        Triton previously relied on disconnected Excel files for stakeholder management and delivery tracking. Each team member worked on separate copies, leading to version conflicts, manual data merges, and limited real-time visibility. Visualizing delivery progress and identifying incomplete contacts was time-consuming and error-prone. This fragmented system hindered collaboration and slowed down field operations.
+                    </p>
                 </section>
 
                 <section className="app-section">
                     <h2>Solution</h2>
                     <p>
-                        I designed OnTract, a centralized system that automates data processing, streamlines workflows, and enhances operational efficiency. The platform enables real-time stakeholder management, delivery tracking, and inventory oversight, providing a seamless and scalable solution for Triton’s outreach program.
+                        I designed and developed OnTract to centralize and streamline Triton’s outreach operations. The application ingests project data from Excel, normalizes and stores stakeholder records, and enables teams to update contact statuses, plan deliveries, assign packages, and manage inventory within a unified interface.
                     </p>
                 </section>
 
@@ -49,7 +51,7 @@ const OnTractPage: React.FC = () => {
                 <section className="app-section">
                     <h2>Results</h2>
                     <p>
-                        OnTract has eliminated manual processes, reduced errors, and improved collaboration by consolidating all data in one place. Triton now benefits from more efficient stakeholder management and enhanced coordination with real-time tracking of deliveries, packages, and project progress.
+                        OnTract replaced multiple disconnected workflows with a single source of truth, significantly reducing manual entry and data consolidation. It improved coordination across teams, enhanced contact tracking, and provided real-time visibility into project status and stakeholder engagement. The system also established scalable, repeatable workflows to support future outreach initiatives more efficiently.
                     </p>
                 </section>
 

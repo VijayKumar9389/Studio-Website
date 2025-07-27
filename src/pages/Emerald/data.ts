@@ -1,7 +1,7 @@
-import Losses from "../../assets/screenshoots/Emerald/Losses.png";
-import Inventory from "../../assets/screenshoots/Emerald/Inventory.png";
-import Rentals from "../../assets/screenshoots/Emerald/Rentals.png";
-import Questions from "../../assets/screenshoots/Emerald/Questions.png";
+import Losses from "../../assets/screenshots/Emerald/Losses.png";
+import Inventory from "../../assets/screenshots/Emerald/Inventory.png";
+import Rentals from "../../assets/screenshots/Emerald/Rentals.png";
+import Questions from "../../assets/screenshots/Emerald/Questions.png";
 import InventoryApp from "../../assets/Media/Collab.png";
 import Emerald from "../../assets/Emerald Logo.png";
 
@@ -16,26 +16,26 @@ export const emeraldData: WorkData = {
     sections: [
         {
             title: "Inventory App & Website",
-            desc: "Streamlining inventory tracking and enhancing digital branding.",
+            desc: "Modernize rental property operations with streamlined inventory tracking and a tenant-focused web presence.",
             sections: [
                 {
                     description:
-                        "Effortlessly manage rental property inventory with receipt storage for accurate record-keeping.",
+                        "Track inventory across multiple properties and securely store receipts for accurate financial documentation.",
                     imageUrl: Losses,
                 },
                 {
                     description:
-                        "Identify missing items, track total costs, and resolve discrepancies across multiple rental locations.",
+                        "Quickly identify missing or consumed items, monitor costs, and maintain accountability across all rental units.",
                     imageUrl: Inventory,
                 },
                 {
                     description:
-                        "Improve online visibility with an interactive website designed to engage potential tenants effectively.",
+                        "Boost your brand’s digital presence with a responsive website showcasing available properties and engaging design.",
                     imageUrl: Rentals,
                 },
                 {
                     description:
-                        "Enhance customer interaction by centralizing inquiries through integrated contact forms within the app.",
+                        "Centralize tenant communication through integrated inquiry forms that sync directly with your inventory system.",
                     imageUrl: Questions,
                 },
             ],

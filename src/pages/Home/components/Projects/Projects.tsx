@@ -1,43 +1,48 @@
-import { useNavigate } from "react-router-dom";
-import { workData } from "./data";
 import './Projects.Module.scss';
-import { FiArrowUpRight } from "react-icons/fi";
+import { project, projectData } from './data';
+import { useNavigate } from 'react-router-dom';
+import Header from "../../../../components/Header/Header.tsx";
 
-const ProjectsSection = () => {
+const ProjectSection = () => {
     const navigate = useNavigate();
 
     return (
-        <section className="projects-section">
-            <h1 data-aos="fade-up">Featured Projects</h1>
-
-            <div className="projects-list">
-                {workData.map((project, index) => (
+        <div className="projects-section">
+            <Header
+                heading="View My Work"
+                desc="From Vision to Reality — From Concept to Impact"
+                chip="Projects"
+            />
+            <div className="project-list">
+                {project.map((section: projectData, index: number) => (
                     <div
+                        className="project"
                         key={index}
-                        className="project-card"
-                        data-aos="zoom-in-up"
-                        data-aos-delay={index * 100}
-                        onClick={() => navigate(project.link)}
                     >
-                        {project.imageUrl && (
-                            <div className="project-image-wrapper">
-                                <img src={project.imageUrl} alt={project.title} className="project-image" />
-                                <div className="image-overlay" />
+                            <div className="project-img">
+                                <img
+                                    src={section.imageUrl}
+                                    alt={section.title}
+                                />
                             </div>
-                        )}
+                            <div className="project-info">
+                                <h4 className="section-header">{section.title}</h4>
+                                <p>{section.description}</p>
 
-                        <div className="project-info">
-                            {project.desc && <p className="project-desc">{project.desc}</p>}
-                            <div className="project-title-wrapper">
-                                <h1 className="project-title">{project.title}</h1>
-                                <FiArrowUpRight className="title-arrow" />
+                                {section.link && (
+                                    <button
+                                        className="btn"
+                                        onClick={() => navigate(section.link)}
+                                    >
+                                        View Project
+                                    </button>
+                                )}
                             </div>
-                        </div>
                     </div>
                 ))}
             </div>
-        </section>
+        </div>
     );
 };
 
-export default ProjectsSection;
+export default ProjectSection;

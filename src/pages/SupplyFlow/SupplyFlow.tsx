@@ -27,21 +27,21 @@ const InventorySupplyPage: React.FC = () => {
                 <section className="app-section">
                     <h2>The Challenge</h2>
                     <p>
-                        Businesses managing inventory across multiple locations often struggle with real-time tracking, accountability, and organization. Lacking centralized control, actions like transfers, audits, and user activity tracking become complex and error-prone. There’s a growing need for a streamlined system that offers full transparency and control across warehouses, users, and stock movements.
+                        Managing inventory across multiple warehouses can lead to disorganized tracking, lack of accountability, and limited real-time insight. Without a centralized system, tasks like transfers, audits, and activity tracking become inefficient and prone to errors. Businesses needed a unified platform to manage stock, track user actions, and maintain control over assets and materials across all locations.
                     </p>
                 </section>
 
                 <section className="app-section">
                     <h2>Solution</h2>
                     <p>
-                        I built an enterprise-grade inventory management system that addresses the full supply flow: Manage inventory and stock efficiently with support for multiple locations and sub-locations. Add equipment, track warranties and statuses, and transfer items between locations as needed. Create material batches to monitor stock inflow, and adjust inventory by transferring or removing stock from batches. Assign multiple users with admin-level permissions to safeguard sensitive features, while a comprehensive log tracks all actions — including additions, edits, deletions, and transfers — along with the responsible user for full transparency and accountability.
+                        I developed an enterprise-grade inventory management system that covers the full supply flow. The system supports multi-location and sub-location tracking, enables stock transfers, and monitors inventory through material batches. Equipment can be registered with warranty and status details, while admins can adjust stock levels or remove items as needed. A role-based permission system protects sensitive actions, and a built-in audit log records all changes—capturing who performed each action for full traceability and accountability.
                     </p>
                 </section>
 
                 <section className="app-features">
                     <AppFeatures
-                        title={"test"}
-                        description={inventorySupplyData.desc}
+                        title={inventorySupplyData.sections[0].title}
+                        description={inventorySupplyData.sections[0].desc}
                         sections={inventorySupplyData.sections.flatMap(section => section.sections)}
                     />
                 </section>
@@ -49,7 +49,7 @@ const InventorySupplyPage: React.FC = () => {
                 <section className="app-section">
                     <h2>Results</h2>
                     <p>
-                        The Inventory Supply Flow App streamlined inventory operations across locations, enhanced control through user permissions, and improved operational insight via dashboards. Teams can now manage warehouse and equipment logistics with confidence, while tracking materials, actions, and stock changes accurately. This leads to greater operational transparency, reduced mismanagement, and stronger accountability.
+                        The Supply Flow system streamlined inventory operations across all locations, enhanced control through user roles, and improved oversight via real-time dashboards. Teams now manage warehouse logistics with confidence, accurately track materials and changes, and operate with greater transparency, reduced risk of mismanagement, and increased accountability.
                     </p>
                 </section>
             </div>

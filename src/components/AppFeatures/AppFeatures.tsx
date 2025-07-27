@@ -19,7 +19,7 @@ const AppFeatures: React.FC<AppFeaturesProps> = ({ title, description, sections 
             {/* Scrollable Content Column */}
             <div className="work-wrapper">
                 {sections.map((section, index) => (
-                    <div key={index} className="work-item" data-aos="fade-up">
+                    <div key={index} className="work-item" >
                         <div className="image-container">
                             <img
                                 src={section.imageUrl}

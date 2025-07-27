@@ -1,12 +1,12 @@
-import StakeholderInfo from "../../assets/screenshoots/OnTract/Stakeholders.png";
-import StakeholderFilter from "../../assets/screenshoots/OnTract/StakeholderFilter.png";
-import DeliveryPlanning from "../../assets/screenshoots/OnTract/DeliveryPlanning.png";
-import DeliveryRoutes from "../../assets/screenshoots/OnTract/DeliveryRoutes.png";
-import DeliveryStatus from "../../assets/screenshoots/OnTract/DeliveryStatus.png";
-import InventoryItems from "../../assets/screenshoots/OnTract/InventoryItems.png";
-import InventoryRecords from "../../assets/screenshoots/OnTract/InventoryRecords.png";
-import InventoryPackage from "../../assets/screenshoots/OnTract/InventoryPackage.png";
-import Upload from "../../assets/screenshoots/Upload.png";
+import StakeholderInfo from "../../assets/screenshots/OnTract/Stakeholders.png";
+import StakeholderFilter from "../../assets/screenshots/OnTract/StakeholderFilter.png";
+import DeliveryPlanning from "../../assets/screenshots/OnTract/DeliveryPlanning.png";
+import DeliveryRoutes from "../../assets/screenshots/OnTract/DeliveryRoutes.png";
+import DeliveryStatus from "../../assets/screenshots/OnTract/DeliveryStatus.png";
+import InventoryItems from "../../assets/screenshots/OnTract/InventoryItems.png";
+import InventoryRecords from "../../assets/screenshots/OnTract/InventoryRecords.png";
+import InventoryPackage from "../../assets/screenshots/OnTract/InventoryPackage.png";
+import Upload from "../../assets/screenshots/Upload.png";
 import OutReach from "../../assets/Media/outreach.png";
 import Triton from "../../assets/TritonLogo.png";
 import {WorkData} from "../../vite-env";
@@ -22,63 +22,63 @@ export const ontractData: WorkData = {
     sections: [
         {
             title: "Stakeholder Management",
-            desc: "Efficiently organize and manage stakeholder interactions.",
+            desc: "Organize, filter, and manage stakeholder data to streamline communication and outreach.",
             sections: [
                 {
                     description:
-                        "Filter stakeholders based on multiple criteria to enhance engagement and outreach efficiency.",
+                        "Filter stakeholders by various criteria such as contact status, location, or missing data to maximize engagement.",
                     imageUrl: StakeholderFilter,
                 },
                 {
                     description:
-                        "Gain insights by visualizing stakeholder relationships and detailed contact information.",
+                        "View detailed stakeholder profiles with relationship mapping to support informed communication.",
                     imageUrl: StakeholderInfo,
                 },
                 {
                     description:
-                        "Seamlessly upload and normalize project data from Excel, ensuring structured database storage.",
+                        "Easily import Excel files and automatically normalize data into a structured, searchable database.",
                     imageUrl: Upload,
                 },
             ],
         },
         {
             title: "Delivery Management",
-            desc: "Optimize package distribution and tracking for seamless deliveries.",
+            desc: "Coordinate, track, and optimize deliveries with complete visibility.",
             sections: [
                 {
                     description:
-                        "Assign and modify safety packages, manage delivery details, and adjust logistics to ensure timely distribution.",
+                        "Plan, assign, and edit safety package deliveries, adjusting routes and logistics in real time to ensure efficient distribution.",
                     imageUrl: DeliveryPlanning,
                 },
                 {
                     description:
-                        "Automatically update stakeholder and delivery statuses upon completion for streamlined tracking.",
+                        "Automatically update delivery and stakeholder statuses upon completion to maintain accurate records with minimal effort.",
                     imageUrl: DeliveryStatus,
                 },
                 {
                     description:
-                        "Optimize delivery routes for field agents, reducing travel time and improving efficiency.",
+                        "Generate optimized delivery routes for field teams, reducing travel time and improving delivery performance.",
                     imageUrl: DeliveryRoutes,
                 },
             ],
         },
         {
             title: "Inventory Management",
-            desc: "Maintain precise inventory control and package tracking.",
+            desc: "Track inventory in real time and manage item distribution across deliveries.",
             sections: [
                 {
                     description:
-                        "Create and customize packages while maintaining real-time inventory counts.",
+                        "Create and manage package configurations while monitoring live inventory levels to prevent shortages.",
                     imageUrl: InventoryPackage,
                 },
                 {
                     description:
-                        "Store item images and quantities for accurate record-keeping and quick reference.",
+                        "Upload item images and define quantities for each product to maintain organized, accessible records.",
                     imageUrl: InventoryItems,
                 },
                 {
                     description:
-                        "Track delivered items, pending shipments, and package details for enhanced inventory management.",
+                        "Track the lifecycle of each item—view what's been delivered, what's pending, and what’s included in each package.",
                     imageUrl: InventoryRecords,
                 },
             ],

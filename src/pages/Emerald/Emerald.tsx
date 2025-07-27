@@ -22,23 +22,21 @@ const EmeraldInventoryPage: React.FC = () => {
                 <section className="app-section">
                     <h2>The Challenge</h2>
                     <p>
-                        Emerald Executive Housing struggled to efficiently manage rental property inventory across multiple locations. Tracking missing or consumed items, monitoring costs, and maintaining accurate records were time-consuming and prone to errors. Additionally, they needed a strong online presence to showcase available properties and attract potential tenants.
+                        Emerald Executive Housing struggled to manage inventory across multiple rental properties. Tracking missing or consumed items, maintaining accurate records, and storing receipts were time-consuming and prone to error. They also lacked an online presence to effectively showcase available units and engage prospective tenants.
                     </p>
                 </section>
 
                 <section className="app-section">
                     <h2>Solution</h2>
                     <p>
-                        I designed a robust Inventory Management System integrated with a responsive website to address these challenges. The system allows property managers to track inventory in real time by adding items to specific locations, logging costs, and securely storing receipts for streamlined financial tracking.
-
-                        To enhance customer engagement, I developed a website that advertises available properties and features an inquiry form, making it easier for potential tenants to connect with Emerald Executive Housing. All inquiries are automatically organized within the inventory system, ensuring efficient communication and response management.
+                        I developed a full-featured Inventory Management System paired with a responsive marketing website. Property managers can assign items to specific locations, monitor usage and losses, and upload receipts for accurate financial tracking. The website highlights available properties and includes an inquiry form, with all submissions automatically integrated into the system to streamline tenant communication and follow-up.
                     </p>
                 </section>
 
                 <section className="app-features">
                     <AppFeatures
-                        title={emeraldData.title}
-                        description={emeraldData.desc}
+                        title={emeraldData.sections[0].title}
+                        description={emeraldData.sections[0].desc}
                         sections={emeraldData.sections.flatMap(section => section.sections)}
                     />
                 </section>
@@ -46,7 +44,7 @@ const EmeraldInventoryPage: React.FC = () => {
                 <section className="app-section">
                     <h2>Results</h2>
                     <p>
-                        The Inventory Management System provided better oversight of stored items, reduced financial tracking errors, and centralized receipt management. Once launched, the website will enhance Emerald’s online visibility and streamline tenant inquiries, improving communication, response efficiency, and overall customer experience.
+                        The system improved inventory oversight, enabled better loss tracking, and centralized receipt management. Once launched, the website will strengthen Emerald’s online presence and simplify tenant inquiries—enhancing communication, response time, and overall customer experience.
                     </p>
                 </section>
             </div>

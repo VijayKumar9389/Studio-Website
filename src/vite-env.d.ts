@@ -1,6 +1,6 @@
 /// <reference types="vite/client" />
 
-// Define the structure for project data.ts
+// Define the structure for project data.ts.ts
 export interface WorkData {
     title: string;
     desc?: string;

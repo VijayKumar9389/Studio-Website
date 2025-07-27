@@ -7,13 +7,10 @@ interface AppHeaderProps {
     imageUrl?: string;
 }
 
-const AppHeader: React.FC<AppHeaderProps> = ({ title, logo, imageUrl }) => {
+const AppHeader: React.FC<AppHeaderProps> = ({ title, imageUrl }) => {
     return (
         <header className="app-header">
-            <div className="app-brand">
                 <h1 className="app-title">{title}</h1>
-                <img src={logo} alt={`${title} logo`} className="app-logo" />
-            </div>
             <div className="app-image">
                 <img
                     src={imageUrl}

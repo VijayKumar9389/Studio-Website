@@ -1,60 +1,80 @@
-@import '../../styles/variables.scss';
+@use '../../styles/variables.scss' as *;
 
 .navbar {
   width: 100%;
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: transparent;
+  background: #fff;
   transition: background 0.3s ease, box-shadow 0.3s ease;
+  border-bottom: 1px solid $border-color;
 
   &.scrolled {
     backdrop-filter: blur(12px);
     background: rgba(255, 255, 255, 0.85);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    box-shadow: $shadow-medium;
   }
 
   &__container {
-    max-width: 1440px;
+    max-width: $desktop-breakpoint;
     margin: 0 auto;
-    padding: 1rem 2rem;
+    padding: $spacing-md $spacing-lg;
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: relative;
   }
 
-  &__logo {
-    font-size: 1.75rem;
-    font-weight: 700;
-    color: $text-primary;
-    cursor: pointer;
+  .navbar__logo {
+    width: 40px;
+    height: 40px;
+    background-color: $primary-color;
+    color: #fff;
+    border-radius: $border-radius-full;
+    font-weight: bold;
+    font-size: 1.125rem;
     display: flex;
     align-items: center;
-    gap: 0.4rem;
-    transition: transform 0.2s ease, opacity 0.2s ease;
-
-    .logo-highlight {
-      color: $primary-color;
-    }
-
+    justify-content: center;
+    cursor: pointer;
   }
 
   &__links {
     display: flex;
-    gap: 2rem;
+    gap: $spacing-lg;
     align-items: center;
-
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
 
+    .navbar__mobile-contact {
+      background-color: $secondary-color;
+      color: #fff;
+      padding: $spacing-sm $spacing-lg;
+      border-radius: $border-radius-sm;
+      font-weight: 600;
+      font-size: 1.125rem;
+      border: none;
+      cursor: pointer;
+      margin-top: $spacing-sm;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+      &:hover {
+        background-color: lighten($secondary-color, 10%);
+        box-shadow: $shadow-medium;
+      }
+
+      @media (min-width: $tablet-breakpoint) {
+        display: none;
+      }
+    }
+
     a {
-      color: $text-secondary;
+      @include font-base;
       font-weight: 500;
       text-decoration: none;
       position: relative;
-      transition: color 0.3s ease;
+      transition: color $transition;
       cursor: pointer;
 
       &::after {
@@ -69,24 +89,24 @@
       }
 
       &:hover {
-        color: $text-primary;
-      }
+        color: $primary-color;
 
-      &:hover::after {
-        width: 100%;
+        &::after {
+          width: 100%;
+        }
       }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: $tablet-breakpoint) {
       position: absolute;
       top: 100%;
       left: 0;
       right: 0;
-      background: rgba(255, 255, 255, 0.95);
+      background: rgba($background-color, 0.95);
       flex-direction: column;
       align-items: center;
-      padding: 1.5rem 0;
-      border-bottom: 1px solid #ddd;
+      padding: $spacing-lg 0;
+      border-bottom: 1px solid $border-color;
       transform: translateY(-10%);
       opacity: 0;
       pointer-events: none;
@@ -99,31 +119,31 @@
       }
 
       a {
-        padding: 0.75rem 0;
+        padding: $spacing-sm 0;
         font-size: 1.125rem;
       }
     }
   }
 
   &__contact-btn {
-    background-color: $primary-color;
+    background-color: $secondary-color;
     color: #fff;
-    padding: 0.5rem 1.5rem;
-    border-radius: 6px;
+    padding: $spacing-sm $spacing-lg;
+    border-radius: $border-radius-sm;
     font-weight: 600;
     font-size: 0.9rem;
     line-height: 1.75;
     border: none;
     cursor: pointer;
-    box-shadow: 0 4px 12px rgba(42, 196, 32, 0.2);
+    box-shadow: $shadow-medium;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 
     &:hover {
-      background-color: lighten($primary-color, 10%);
-      box-shadow: 0 6px 18px rgba(42, 196, 32, 0.25);
+      background-color: lighten($secondary-color, 10%);
+      box-shadow: $shadow-strong;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: $tablet-breakpoint) {
       display: none;
     }
   }
@@ -132,11 +152,18 @@
     display: none;
     background: transparent;
     border: none;
-    color: #1f2937;
+    color: $text-primary;
     cursor: pointer;
+    box-shadow: none;
+    padding: $spacing-sm;
 
-    @media (max-width: 768px) {
-      display: block;
+    &:hover {
+      background-color: $primary-color;
+      color: #fff;
+    }
+
+    @media (max-width: $tablet-breakpoint) {
+      display: flex;
     }
   }
 }

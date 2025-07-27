@@ -1,21 +1,13 @@
-@import '../../styles/variables.scss';
+@use '../../styles/variables.scss' as *;
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @keyframes slideUp {
-  from {
-    transform: translateY(100%);
-  }
-  to {
-    transform: translateY(0);
-  }
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
 }
 
 .contact-modal-backdrop {
@@ -27,28 +19,29 @@
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  animation: fadeIn 0.3s ease forwards;
+  animation: fadeIn 0.3s ease-out forwards;
+
+  @media (min-width: $tablet-breakpoint) {
+    align-items: center;
+    padding: $spacing-sm;
+  }
 }
 
 .contact-modal-container {
-  background: #fff;
+  background-color: #fff;
   width: 100%;
-  max-width: 600px;
   max-height: 85vh;
-  border-radius: 1rem 1rem 0 0;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-  animation: slideUp 0.3s ease forwards;
+  border-radius: $border-radius-lg $border-radius-lg 0 0;
+  box-shadow: $shadow-strong;
+  animation: slideUp 0.3s ease-out forwards;
   overflow-y: auto;
-  padding: 1.5rem 2rem;
+  padding: $spacing-md;
   position: relative;
 
-  // On larger screens, show modal centered and with rounded corners on all sides
-  @media (min-width: 768px) {
-    border-radius: 1rem;
-    max-height: none;
-    height: auto;
-    align-self: center;
-    margin: 0 1rem;
+  @media (min-width: $tablet-breakpoint) {
+    border-radius: $border-radius-lg;
+    max-height: 90vh;
+    max-width: 600px;
   }
 }
 
@@ -56,112 +49,71 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 0.5rem;
-  margin-bottom: 1.25rem;
+  padding-bottom: $spacing-md;
+  border-bottom: 1px solid $border-color;
+  margin-bottom: $spacing-lg;
 
   .contact-modal-title {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #222;
+    color: $text-primary;
   }
 
   .contact-modal-close {
-    background: transparent;
+    background: #fff;
     border: none;
     cursor: pointer;
-    color: #666;
+    color: $text-primary;
     width: 2.25rem;
     height: 2.25rem;
-    border-radius: 50%;
+    border-radius: $border-radius-full;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: background 0.2s ease, color 0.2s ease;
 
     &:hover {
-      color: #222;
-      background: #f0f0f0;
+      background: $accent-background-color;
     }
   }
 }
 
-.contact-modal-form {
+.contact-modal-body {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: $spacing-xl;
+}
 
-  .form-group {
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+
+  .contact-item {
     display: flex;
-    flex-direction: column;
-    position: relative;
+    align-items: center;
+    gap: $spacing-sm;
+    color: $text-primary;
+    font-size: 1rem;
 
-    label {
-      font-weight: 600;
-      margin-bottom: 0.4rem;
-      color: #222;
-      font-size: 0.95rem;
-      transition: color 0.3s ease;
-    }
-
-    input,
-    textarea {
-      padding: 0.75rem 1rem;
-      border-radius: 5px;
-      border: 1px solid #ddd;
-      font-size: 1rem;
-      background-color: #f9f9f9;
-      color: #333;
-      transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    a {
+      color: $text-secondary;
+      text-decoration: none;
 
       &:hover {
-        background-color: #fff;
-        border-color: #bbb;
-      }
-
-      &:focus {
-        outline: none;
-        border-color: $primary-color;
-        background-color: #fff;
+        color: $primary-color;
       }
     }
 
-    textarea {
-      resize: vertical;
-      min-height: 120px;
-    }
-
-    .error {
-      color: #d32f2f;
-      font-size: 0.85rem;
-      margin-top: 0.3rem;
-      position: absolute;
-      bottom: -1.2rem;
-      left: 0;
+    .contact-icon {
+      font-size: 1.25rem;
+      color: $primary-color;
     }
   }
+}
 
-  .submit-button {
-    background-color: $primary-color;
-    color: #fff;
-    padding: 0.5rem 1.5rem;
-    border-radius: 6px;
-    font-weight: 600;
-    font-size: 0.9rem;
-    line-height: 1.75;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 4px 12px rgba(42, 196, 32, 0.2);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    width: fit-content;
-
-    &:hover {
-      background-color: lighten($primary-color, 10%);
-      box-shadow: 0 6px 18px rgba(42, 196, 32, 0.25);
-    }
-
-    @media (max-width: 768px) {
-      display: none;
-    }
-  }
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-md;
 }

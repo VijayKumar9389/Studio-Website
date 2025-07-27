@@ -1,9 +1,9 @@
-import Dashboard from "../../assets/screenshoots/SupplyFlow/Dashboard.png";
-import Warehouses from "../../assets/screenshoots/SupplyFlow/Warehouses.png";
-import Equipment from "../../assets/screenshoots/SupplyFlow/Equipment.png";
-import Materials from "../../assets/screenshoots/SupplyFlow/Materials.png";
-import Logs from "../../assets/screenshoots/SupplyFlow/Logs.png";
-import Users from "../../assets/screenshoots/SupplyFlow/Users.png";
+import Dashboard from "../../assets/screenshots/SupplyFlow/Dashboard.png";
+import Warehouses from "../../assets/screenshots/SupplyFlow/Warehouses.png";
+import Equipment from "../../assets/screenshots/SupplyFlow/Equipment.png";
+import Materials from "../../assets/screenshots/SupplyFlow/Materials.png";
+import Logs from "../../assets/screenshots/SupplyFlow/Logs.png";
+import Users from "../../assets/screenshots/SupplyFlow/Users.png";
 import InventoryApp from "../../assets/inventoryapp.png";
 import InventoryLogo from "../../assets/Media/deploy.svg";
 
@@ -18,36 +18,36 @@ export const inventorySupplyData: WorkData = {
     sections: [
         {
             title: "Inventory, Warehousing & User Control",
-            desc: "Robust tools for organizing inventory, managing locations, and securing access.",
+            desc: "Comprehensive tools to streamline inventory operations, monitor warehouse activity, and manage user access securely.",
             sections: [
                 {
                     description:
-                        "Track and manage inventory across warehouses with sub-location support. Organize stock through batch entries and streamline transfers between locations.",
+                        "Monitor inventory across multiple warehouses with sub-location support for organized stock distribution and tool tracking.",
                     imageUrl: Warehouses,
                 },
                 {
                     description:
-                        "Log tools and equipment with warranty tracking and lifecycle status—active, under maintenance, or out of service.",
+                        "Log equipment with warranty status, usage lifecycle, and enable seamless transfers across locations for operational flexibility.",
                     imageUrl: Equipment,
                 },
                 {
                     description:
-                        "Add materials in batches, update stock levels, and monitor quantities with expiry and source details.",
+                        "Add and manage material batches with detailed attributes such as quantity, pricing, location, and expiration for accurate tracking.",
                     imageUrl: Materials,
                 },
                 {
                     description:
-                        "Visualize warehouse capacity, stock health, and item distribution through a real-time dashboard.",
+                        "Visualize warehouse and inventory metrics in real time with an interactive dashboard highlighting stock levels and distribution.",
                     imageUrl: Dashboard,
                 },
                 {
                     description:
-                        "Access detailed logs of all user activities—item additions, edits, and transfers—for full operational transparency and accountability.",
+                        "Ensure traceability with a complete activity log detailing every stock change—additions, edits, deletions, and transfers—along with the user responsible.",
                     imageUrl: Logs,
                 },
                 {
                     description:
-                        "Manage user accounts with role-based permissions to control access and protect sensitive data.",
+                        "Enforce security with role-based user permissions, giving teams controlled access to features based on their responsibilities.",
                     imageUrl: Users,
                 },
             ],

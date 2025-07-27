@@ -1,10 +1,82 @@
+// Primary Brand Colors
+$secondary-color: #0f172a; // Deep navy, sleek and modern
+$primary-color: #dc2626; // Vibrant tech blue for accents and highlights
+$secondary-accent: #22d3ee; // Bright cyan for subtle emphasis
 
-$background-color: #f5f8ff;
-$primary-color: #2563eb;
-$text-primary: #333333; // Dark gray for primary text
-$text-secondary: #666666; // Medium gray for secondary text
+// Neutrals & Backgrounds
+$background-color: #f9fafb; // Ultra-light cool gray for clean backgrounds
+$accent-background-color: #F1F2F3; // Soft bluish-gray to add depth
 
-$font-size-title: 3rem; // Title font size
-$font-size-subtitle: 2.25rem; // Subtitle font size
-$font-size-tagline: 1.5rem; // Tagline font size
-$font-size-base: 1.125rem; // Base font size
+// Borders, Dividers, etc.
+$border-color: #cbd5e1; // Light slate for refined borders
+
+// Text Colors
+$text-primary: #1e293b; // Dark slate gray for readable headings
+$text-secondary: #64748b; // Medium grayish blue for secondary text
+$text-muted: #94a3b8; // Muted gray for captions and placeholders
+
+// Spacing
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 32px;
+$spacing-xl: 48px;
+
+// Border Radius
+$border-radius-sm: 8px;
+$border-radius-md: 16px;
+$border-radius-lg: 24px;
+$border-radius-full: 9999px; // Fully rounded for pills and avatars
+
+// Shadows
+$shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.06);
+$shadow-medium: 0 4px 10px rgba(59, 130, 246, 0.2);
+$shadow-strong: 0 10px 25px rgba(59, 130, 246, 0.3);
+
+// Transitions
+$transition: cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+
+// Breakpoints
+$mobile-breakpoint: 640px;
+$tablet-breakpoint: 1024px;
+$desktop-breakpoint: 1440px;
+
+@mixin font-title {
+  font-size: 3.5rem; // 56px
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.015em; // Tight tracking for large titles
+  color: $text-primary;
+}
+
+@mixin font-subtitle {
+  font-size: 2.25rem; // 36px
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  color: $text-primary;
+}
+
+@mixin font-tagline {
+  font-size: 1.75rem; // 28px
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  color: $text-primary;
+}
+
+@mixin font-base {
+  font-size: 1.125rem; // 18px
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+  color: $text-secondary;
+  opacity: 0.9; // Slightly muted for body text
+}
+
+@mixin font-sm {
+  font-size: 0.875rem; // 14px
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.005em;
+}

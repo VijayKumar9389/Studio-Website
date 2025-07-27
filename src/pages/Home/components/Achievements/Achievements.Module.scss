@@ -1,0 +1,60 @@
+@use '../../../../styles/variables' as *;
+
+.achievements-section {
+  max-width: $desktop-breakpoint;
+  margin: 0 auto;
+}
+
+.achievements-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $spacing-xl;
+
+  @media (max-width: $tablet-breakpoint) {
+    gap: $spacing-lg;
+    grid-template-columns: 1fr;
+  }
+}
+
+.achievements-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: $border-radius-md;
+  overflow: hidden;
+  transition: transform $transition, box-shadow $transition;
+  background-color: $accent-background-color;
+
+  .achievements-image-wrapper {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top left;
+      display: block;
+      transition: transform $transition;
+    }
+  }
+
+  .achievements-info {
+    padding: $spacing-lg;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+
+    .project-title {
+      @include font-tagline;
+      margin: 0;
+      position: relative;
+    }
+
+    .project-desc {
+      @include font-base;
+    }
+  }
+}

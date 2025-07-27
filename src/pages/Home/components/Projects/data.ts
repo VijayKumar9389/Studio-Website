@@ -1,64 +1,42 @@
-import InventoryApp from "../../../../assets/rental.png";
 import OutReach from "../../../../assets/outreach.png";
+import InventoryApp from "../../../../assets/rental.png";
 import Material from "../../../../assets/inventoryapp.png";
+import MaterialCalc from "../../../../assets/MaterialCalc.png";
 
-// Define the structure for project data.ts
-export interface WorkData {
+export interface projectData {
     title: string;
-    desc?: string;
-    imageUrl?: string;
+    description: string;
+    imageUrl: string;
     link: string;
-    bgGradient?: string;
 }
 
-export const workData: WorkData[] = [
+export const project = [
     {
         title: 'OnTract App',
-        desc: 'Outreach Management',
+        description:
+            'OnTract, developed for Triton Public Awareness, is a centralized information system that streamlines stakeholder management, safety package delivery tracking, and real-time monitoring of project progress.',
         imageUrl: OutReach,
-        bgGradient: "linear-gradient(135deg, #f9c5d1, #f06292)",
         link: '/ontract',
-
     },
     {
-        title: 'Rental Inventory',
-        desc: 'Inventory Management & Digital Marketing',
+        title: 'Rental Inventory Tracker',
+        description:
+            'The Inventory Tracker, developed for Emerald Executive Housing, is a centralized system that modernizes rental property inventory management while supporting digital marketing efforts to enhance tenant engagement.',
         imageUrl: InventoryApp,
-        bgGradient: "linear-gradient(135deg, #a1c4fd, #c2e9fb)",
         link: '/emerald',
     },
     {
         title: 'Supply Flow',
-        desc: 'Inventory and Stock Management',
+        description:
+            'A centralized system for managing inventory, equipment, and warehouse operations across multiple locations—offering real-time visibility, granular tracking, and secure access control for complete operational oversight.',
         imageUrl: Material,
-        bgGradient: "linear-gradient(135deg, #a1c4fd, #c2e9fb)",
         link: '/supplyflow',
-    }
-]
-
-
-// Work data.ts for each project
-// export const workData: WorkData[] = [
-//     {
-//         title: 'Outreach Management',
-//         desc: 'OnTract, developed for Triton Public Awareness, streamlines stakeholder engagement, delivery logistics, and inventory tracking. The platform offers an intuitive interface to update stakeholder contacts, manage safety package distribution, and coordinate deliveries with real-time tracking.',
-//         imageUrl: OutReach,
-//         bgGradient: "linear-gradient(135deg, #f9c5d1, #f06292)",
-//         link: '/ontract',
-//
-//     },
-//     {
-//         title: 'Inventory Management & Digital Marketing',
-//         desc: 'The Inventory Tracker, developed for Emerald Executive Housing, modernizes rental property inventory management while integrating digital marketing strategies to enhance online presence and customer engagement. (In Progress)',
-//         imageUrl: InventoryApp,
-//         bgGradient: "linear-gradient(135deg, #a1c4fd, #c2e9fb)",
-//         link: '/emerald',
-//     },
-//     {
-//         title: 'Inventory and Stock Management',
-//         desc: "A centralized system for managing inventory, equipment, and warehouse operations across multiple locations. Designed to provide real-time insights, granular tracking, and secure user access control for full operational visibility.",
-//         imageUrl: Material,
-//         bgGradient: "linear-gradient(135deg, #a1c4fd, #c2e9fb)",
-//         link: '/supplyflow',
-//     }
-// ]
+    },
+    {
+        title: 'Material Calculator',
+        description:
+            'Material Calculator is a mobile-first app built for contractors to generate accurate material estimates by entering site dimensions and coverage rates.',
+        imageUrl: MaterialCalc,
+        link: '/materialcalc',
+    },
+];
