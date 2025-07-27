@@ -156,6 +156,8 @@
     cursor: pointer;
     box-shadow: none;
     padding: $spacing-sm;
+    transition: 0.3s ease;
+    border-radius: $border-radius-sm;
 
     &:hover {
       background-color: $primary-color;
