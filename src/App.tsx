@@ -5,7 +5,6 @@ import Home from "./pages/Home/Home.tsx";
 import OnTract from "./pages/Ontract/OnTract.tsx";
 import Emerald from "./pages/Emerald/Emerald.tsx";
 import SupplyFlow from "./pages/SupplyFlow/SupplyFlow.tsx";
-import MaterialCalc from "./pages/MaterialCalc/MaterialCalc.tsx";
 
 function App() {
     return (
@@ -15,7 +14,6 @@ function App() {
                 <Route path="/ontract" element={<OnTract/>}/>
                 <Route path="/emerald" element={<Emerald/>}/>
                 <Route path="/supplyflow" element={<SupplyFlow/>}/>
-                <Route path="/materialcalc" element={<MaterialCalc/>}/>
             </Routes>
         </Router>
     );

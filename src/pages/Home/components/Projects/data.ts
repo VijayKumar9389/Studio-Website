@@ -1,7 +1,6 @@
 import OutReach from "../../../../assets/outreach.png";
 import InventoryApp from "../../../../assets/rental.png";
 import Material from "../../../../assets/inventoryapp.png";
-import MaterialCalc from "../../../../assets/MaterialCalc.png";
 
 export interface projectData {
     title: string;
@@ -32,11 +31,11 @@ export const project = [
         imageUrl: Material,
         link: '/supplyflow',
     },
-    {
-        title: 'Material Calculator',
-        description:
-            'Material Calculator is a mobile-first app built for contractors to generate accurate material estimates by entering site dimensions and coverage rates.',
-        imageUrl: MaterialCalc,
-        link: '/materialcalc',
-    },
+    // {
+    //     title: 'Material Calculator',
+    //     description:
+    //         'Material Calculator is a mobile-first app built for contractors to generate accurate material estimates by entering site dimensions and coverage rates.',
+    //     imageUrl: MaterialCalc,
+    //     link: '/materialcalc',
+    // },
 ];
